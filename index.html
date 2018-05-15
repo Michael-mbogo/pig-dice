@@ -10,40 +10,43 @@
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
-        <h1>Pig Dice</h1>
-      </div><br>
-      <div class="rules">
-        <p>The game is played by 2 players. Where the players roll a dice by clicking on the roll button, each player at a time. When a player rolls a one, the players turn is forfetied and lets the other player take over. When a player rolls any other number, he can continue rolling or decide to hold, by clicking on the hold button. This will upgrade his score and lets the other player take over.</p>
-        <p>A winner is announced when one of the players gets to a score of 100.</p>
-      </div>
-      <br>
-      <br>
-      <br>
-
+      <div class="flex">
+        <h1><img src="img/images/dice.png" alt="">Pig Dice</h1>
+    </div>
+    <div class="rules">
+      <h3 id="rules">Rules of Play:</h3>
+      <ol>
+        <li>A player rolls the dice</li>
+        <li>If the player gets "1" then their turn is over and they score 0.</li>
+        <li>If the player does not get "1" then the die amount is added to their turn score and they can roll again or hold.</li>
+        <li>When the player holds, their turn amount is added to their total score.</li>
+        <li>Repeat until one player has 100 points ore more.</li>
+      </ol>
+    </div>
       <div class="gameDisplay">
-        <div class="row">
-          <div class="col-md-6" id="gameDisplayPlayer1">
-            <div id="player1Button">
-              <h2>Player One</h2>
-              <h2>Current Score:</h2>
-              <h2>Total Result: <span id="rollResult" class="gameOutput rollResult"></span></h2>
-              <button type="button" class="btn btn-default rollGame">Roll</button>
-              <button type="button" class="btn btn-primary holdGame">Hold</button>
-            </div>
+      <div class="row">
+        <div class="col-md-6" id="gameDisplayPlayer1">
+          <div id="player1Button">
+          <h2>Player One</h2>
+          <h3>Current Score:<span id="currentScore" class="gameOutput turnScore"></h3>
+          <h3>Total Result: <span id="rollResult" class="gameOutput rollResult"></span></h3>
+          <button type="button" class="btn btn-default rollGame">Roll</button>
+          <button type="button" class="btn btn-primary holdGame">Hold</button>
           </div>
-          <div class="col-md-6 " id="Player2">
-            <h2><span id="playerName2"></span>Player Two</h2>
-            <div id="player2Button">
-              <h2>Current Score: <span id="currentScore" class="gameOutput turnScore"></span></h2>
-              <h2>Roll Result: <span id="rollResult" class="gameOutput rollResult"></span></h2>
-              <button type="button" class="btn btn-default rollGame">Roll</button>
-              <button type="button" class="btn btn-primary holdGame">Hold</button>
-            </div>
-          </div>
+        </div>
+        <div class="col-md-6 " id="Player2">
+          <h2><span id="playerName2"></span>Player Two</h2>
+          <div id="player2Button">
+          <h3>Current Score: <span id="current2Score" class="gameOutput turnScore"></span></h3>
+          <h3>Roll Result: <span id="rollResult2" class="gameOutput rollResult2"></span></h3>
+
+
+          <button type="button" class="btn btn-default rollGame2">Roll</button>
+          <button type="button" class="btn btn-primary holdGame">Hold</button>
         </div>
       </div>
     </div>
-
+  </div>
+</div>
   </body>
 </html>

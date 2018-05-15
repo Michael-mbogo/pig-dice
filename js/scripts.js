@@ -34,7 +34,6 @@ function holdThePig() {
   } else {
     diceVar.playerTwoResult += diceVar.currentScore;
   }
-  diceVar.currentScore = 0;
   switchPlayer();
 }
 
@@ -86,9 +85,14 @@ $(document).ready(function() {
 
   $(".rollGame").click(function() {
     pigResult = playerRoll();
-    $(".rollResult").text(pigResult);
-    $("#currentScore").text(diceVar.currentScore);
+    $("#currentScore").text(pigResult);
+    $(".rollResult").text(diceVar.currentScore);
 
+  });
+  $(".rollGame2").click(function() {
+    pigResult = playerRoll();
+    $("#current2Score").text(pigResult);
+    $(".rollResult2").text(diceVar.currentScore);
   });
 
   $(".holdGame").click(function(){

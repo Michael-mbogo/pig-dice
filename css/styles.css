@@ -1,8 +1,21 @@
-.container {
-  background-color: silver;
+body{
+  background-color: #d3d3d3;
 }
-.rules {
-  text-align: center;
-  font-size: 15px;
+.flex{
+  height: 100px;
   font-style: italic;
+  color: red;
+
+}img{
+  height: 100px;
+  width: 100px;
+}
+.rules{
+  border: 10px solid green;
+  font-style: tahoma;
+  font-weight: 400;
+  font-size: 12px;
+  background-color: grey;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
